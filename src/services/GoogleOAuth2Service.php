@@ -104,7 +104,7 @@ class GoogleOAuth2Service extends Service
 	protected $type = 'OAuth2';
 	protected $jsArguments = array('popup' => array('width' => 500, 'height' => 450));
 
-	protected $scopes = array(self::SCOPE_USERINFO_PROFILE);
+	protected $scopes = array(self::SCOPE_USERINFO_EMAIL);
 	protected $providerOptions = array(
 		'authorize' => 'https://accounts.google.com/o/oauth2/auth',
 		'access_token' => 'https://accounts.google.com/o/oauth2/token',
@@ -121,15 +121,18 @@ class GoogleOAuth2Service extends Service
 			$this->attributes['url'] = $info['link'];
 		}
 
-		/*if (!empty($info['gender']))
+		if (!empty($info['gender']))
 			$this->attributes['gender'] = $info['gender'] == 'male' ? 'M' : 'F';
 		
 		if (!empty($info['picture']))
 			$this->attributes['photo'] = $info['picture'];
+
+		if (!empty($info['email']))
+			$this->attributes['email'] = $info['email'];
 		
 		$info['given_name']; // first name
 		$info['family_name']; // last name
-		$info['birthday']; // format: 0000-00-00
+		//$info['birthday']; // format: 0000-00-00
 		$info['locale']; // format: en*/
 	}
 

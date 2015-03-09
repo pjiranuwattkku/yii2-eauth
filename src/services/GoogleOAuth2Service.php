@@ -133,7 +133,7 @@ class GoogleOAuth2Service extends Service
 		$info['given_name']; // first name
 		$info['family_name']; // last name
 		//$info['birthday']; // format: 0000-00-00
-		$info['locale']; // format: en*/
+		//$info['locale']; // format: en*/
 	}
 
 	/**

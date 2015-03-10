@@ -219,6 +219,7 @@ class ServiceProxy extends AbstractService
 			'client_id' => $this->credentials->getConsumerId(),
 			'redirect_uri' => $this->credentials->getCallbackUrl(),
 			'response_type' => 'code',
+			'hd'=> 'kku.ac.th',
 		));
 
 		$parameters['scope'] = implode($this->service->getScopeSeparator(), $this->scopes);
